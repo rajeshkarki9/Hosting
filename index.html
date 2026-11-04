@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <!-- CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #333;
+        }
+
+        /* Navbar */
+        header {
+            background: #111827;
+            padding: 20px 8%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul a:hover {
+            color: #38bdf8;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            background: none;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 500px;
+            background: linear-gradient(135deg, #1e3a8a, #0891b2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f97316;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 5px;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ea580c;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        /* Services */
+        .services {
+            background: white;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #f1f5f9;
+            padding: 35px 25px;
+            width: 280px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 5px 20px #0002;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        /* Contact */
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        #response {
+            margin-top: 15px;
+            color: green;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #111827;
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h2 class="logo">MyWebsite</h2>
+
+            <ul id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <div class="hero" id="home">
+        <div>
+            <h1>Welcome to My Website</h1>
+            <p>We create modern, creative and responsive websites.</p>
+            <a href="#services" class="btn">Explore More</a>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            We are passionate about technology and innovation.
+            Our goal is to provide quality digital solutions
+            to help businesses grow.
+        </p>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>We develop modern and responsive websites.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>We design beautiful user-friendly interfaces.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Digital Solutions</h3>
+                <p>We provide innovative digital solutions.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name"
+                placeholder="Your Name" required>
+
+            <input type="email" id="email"
+                placeholder="Your Email" required>
+
+            <textarea id="message"
+                placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+        </form>
+
+        <p id="response"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyWebsite. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu
+        function toggleMenu() {
+            document.getElementById("navLinks")
+                .classList.toggle("active");
+        }
+
+        // Close mobile menu
+        document.querySelectorAll("#navLinks a")
+            .forEach(link => {
+                link.addEventListener("click", () => {
+                    document.getElementById("navLinks")
+                        .classList.remove("active");
+                });
+            });
+
+        // Contact Form
+        document.getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                let name = document.getElementById("name").value;
+
+                document.getElementById("response").innerText =
+                    "Thank you, " + name + "! Message received.";
+
+                this.reset();
+            });
+    </script>
+
+</body>
+</html>
