@@ -3,47 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern digital agency crafting responsive websites, modern UI/UX design, and innovative digital solutions.">
-    <title>ApexDigital | Modern Web & Digital Solutions</title>
+    <meta name="description" content="Independent creative engineering and digital design studio. We craft bespoke, high-performance websites without generic templates or bloat.">
+    <title>Studio Rajesh — Design &amp; Creative Engineering</title>
 
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <!-- Distinctive Typographic Pairing (Syne + Plus Jakarta Sans + JetBrains Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Stylesheet -->
+    <!-- Handcrafted Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header id="header">
+    <!-- Live Status Top Bar -->
+    <div class="top-notice">
+        <div class="container top-notice-content">
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                <span>Available for selected projects &amp; collaborations</span>
+            </div>
+            <div class="footer-time">
+                <span>Studio Local Time: </span>
+                <span id="liveClock">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
         <div class="container">
             <nav>
-                <a href="#home" class="logo">
-                    <span class="logo-icon">⚡</span>
-                    <span>Apex<span class="gradient-text">Digital</span></span>
+                <a href="#home" class="brand">
+                    <span>Rajesh</span>
+                    <span class="brand-dot"></span>
+                    <span style="font-weight: 400; color: var(--text-muted); font-size: 1rem;">Studio</span>
                 </a>
 
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#work" class="nav-link">Selected Work</a></li>
+                    <li><a href="#services" class="nav-link">Capabilities</a></li>
+                    <li><a href="#about" class="nav-link">Philosophy</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
 
-                <div class="nav-actions">
-                    <!-- Dark / Light Theme Toggle -->
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
+                <div class="nav-right">
+                    <!-- Light / Dark Theme Button -->
+                    <button class="theme-btn" id="themeBtn" aria-label="Toggle visual theme" title="Toggle theme">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                     </button>
 
-                    <a href="#contact" class="btn btn-primary nav-cta">Get in Touch</a>
+                    <a href="#contact" class="btn btn-solid" style="padding: 10px 20px; font-size: 0.85rem;">Let's Talk</a>
 
-                    <!-- Mobile Menu Hamburger Button -->
-                    <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu" aria-expanded="false">
+                    <!-- Mobile Hamburger -->
+                    <button class="menu-toggle" id="menuToggle" aria-label="Open mobile menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -55,99 +70,310 @@
 
     <!-- Hero Section -->
     <div class="hero" id="home">
-        <div class="hero-glow-1"></div>
-        <div class="hero-glow-2"></div>
-
-        <div class="container hero-content">
-            <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                <span>Crafting High-Performance Digital Experiences</span>
+        <div class="container">
+            <div class="hero-meta">
+                <span class="hero-meta-badge">Independent Studio</span>
+                <span class="mono-label">Est. 2026 &mdash; Web &amp; Product Design</span>
             </div>
 
             <h1 class="hero-title">
-                We Build Fast, Modern &amp; <span class="gradient-text">Scalable Websites</span>
+                We engineer websites that are fast, intentional, and <span class="highlight">distinctly human</span>.
             </h1>
 
-            <p class="hero-description">
-                Elevate your brand with sleek user interfaces, blazing-fast performance, and cutting-edge web architecture engineered to convert visitors into loyal clients.
-            </p>
+            <div class="hero-bottom-row">
+                <p class="hero-lead">
+                    No recycled templates. No bloated frameworks. Just clean architecture, refined typography, and purposeful motion crafted to make your brand impossible to ignore.
+                </p>
 
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-glow">
-                    <span>Explore Services</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="#about" class="btn btn-secondary">Learn About Us</a>
-            </div>
-
-            <!-- Stats Ribbon -->
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="99" data-suffix="%">0%</span>
-                    <span class="stat-label">Client Satisfaction</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="150" data-suffix="+">0+</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="10" data-suffix="x">0x</span>
-                    <span class="stat-label">Average Speed Boost</span>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-solid">Explore Selected Work &darr;</a>
+                    <a href="#contact" class="btn btn-outline">Start an Inquiry</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
+    <!-- Architectural Metrics Strip -->
+    <div class="metrics-section">
         <div class="container">
-            <div class="about-grid">
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <div class="metric-num">100%</div>
+                    <div class="metric-text">Vanilla &amp; standards-compliant code with zero framework lock-in.</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-num">&lt; 0.6s</div>
+                    <div class="metric-text">Average initial paint on desktop and mobile devices.</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-num">A+</div>
+                    <div class="metric-text">Lighthouse performance, SEO, accessibility &amp; best practice score.</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-num">1-on-1</div>
+                    <div class="metric-text">Direct collaboration with the engineer &amp; designer from day one.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selected Work / Projects -->
+    <section class="section" id="work">
+        <div class="container">
+            <div class="section-head">
                 <div>
-                    <span class="section-tag">About Our Agency</span>
-                    <h2 class="section-title">Driven by Innovation, Defined by Quality</h2>
-                    <p class="section-desc" style="text-align: left; margin-bottom: 20px;">
-                        We are passionate designers, developers, and digital strategists committed to transforming bold ideas into world-class digital products.
-                    </p>
-                    <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.05rem;">
-                        Whether you are launching a fresh startup or scaling an established enterprise, our holistic approach combines aesthetic elegance, flawless responsive design, and clean, maintainable code.
-                    </p>
-                    <a href="#contact" class="btn btn-primary">Start a Project</a>
+                    <span class="mono-label">01 / Portfolio</span>
+                    <h2 class="section-title">Selected Case Studies</h2>
                 </div>
 
-                <div class="about-visual">
-                    <div class="about-card-stack">
-                        <span class="about-stack-badge">Why Choose Us</span>
-                        
-                        <div class="about-feature-list">
-                            <div class="about-feature-item">
-                                <div class="feature-icon-wrapper">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                                </div>
-                                <div>
-                                    <h4>Clean &amp; Semantic Code</h4>
-                                    <p>Lightweight, standards-compliant HTML5, CSS3, and modern vanilla JavaScript with zero bloat.</p>
-                                </div>
-                            </div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="engineering">Engineering</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+            </div>
 
-                            <div class="about-feature-item">
-                                <div class="feature-icon-wrapper">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                                </div>
-                                <div>
-                                    <h4>Pixel-Perfect Responsive</h4>
-                                    <p>Flawless viewing experience across smartphones, tablets, laptops, and ultra-wide screens.</p>
-                                </div>
+            <div class="work-grid">
+                <!-- Project 1 -->
+                <article class="project-card" data-category="engineering">
+                    <div class="project-preview">
+                        <div class="preview-mockup">
+                            <div class="mockup-bar">
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
                             </div>
+                            <div class="mockup-wireframe">
+                                <span>[ Live Interactive Canvas ]</span>
+                            </div>
+                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+                                <span>HTTP/3 &bull; 99.9% Uptime</span>
+                                <span>24ms TTFB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta-row">
+                            <span class="mono-label">Web Platform &bull; 2026</span>
+                            <span class="tag">Engineering</span>
+                        </div>
+                        <h3 class="project-title">Koto Commerce Engine</h3>
+                        <p class="project-desc">A blazing-fast editorial e-commerce interface built for high-inventory fashion retailers, with sub-second page transitions and custom checkout.</p>
+                        <div class="project-footer">
+                            <div class="tag-list">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS Grid</span>
+                                <span class="tag">Vanilla JS</span>
+                            </div>
+                            <a href="#contact" class="arrow-link">View Case <span>&nearr;</span></a>
+                        </div>
+                    </div>
+                </article>
 
-                            <div class="about-feature-item">
-                                <div class="feature-icon-wrapper">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                                </div>
-                                <div>
-                                    <h4>Optimized for Conversions</h4>
-                                    <p>Intuitive user journeys and strategic call-to-actions tailored to boost engagement.</p>
-                                </div>
+                <!-- Project 2 -->
+                <article class="project-card" data-category="design">
+                    <div class="project-preview" style="background: var(--bg-muted);">
+                        <div class="preview-mockup">
+                            <div class="mockup-bar">
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
                             </div>
+                            <div class="mockup-wireframe" style="border-style: solid;">
+                                <span style="font-weight: 600;">[ Spatial Design System ]</span>
+                            </div>
+                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+                                <span>Dark &amp; Light Tokens</span>
+                                <span>48 Components</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta-row">
+                            <span class="mono-label">Design System &bull; 2026</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <h3 class="project-title">Aura Spatial Typography</h3>
+                        <p class="project-desc">Complete brand identity, responsive layout grid, and tactile design guidelines designed for a generative audio hardware company.</p>
+                        <div class="project-footer">
+                            <div class="tag-list">
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Design Systems</span>
+                                <span class="tag">Prototyping</span>
+                            </div>
+                            <a href="#contact" class="arrow-link">View Case <span>&nearr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" data-category="engineering">
+                    <div class="project-preview">
+                        <div class="preview-mockup">
+                            <div class="mockup-bar">
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                            </div>
+                            <div class="mockup-wireframe">
+                                <span>[ Realtime Telemetry Dashboard ]</span>
+                            </div>
+                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+                                <span>WebSockets &bull; 60 FPS</span>
+                                <span>Zero Lag</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta-row">
+                            <span class="mono-label">SaaS Application &bull; 2026</span>
+                            <span class="tag">Engineering</span>
+                        </div>
+                        <h3 class="project-title">Verve Analytics Console</h3>
+                        <p class="project-desc">Real-time data visualization dashboard capable of streaming millions of data points smoothly without dropped frames.</p>
+                        <div class="project-footer">
+                            <div class="tag-list">
+                                <span class="tag">SVG Charts</span>
+                                <span class="tag">State Management</span>
+                                <span class="tag">CSS Animation</span>
+                            </div>
+                            <a href="#contact" class="arrow-link">View Case <span>&nearr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-category="design">
+                    <div class="project-preview" style="background: var(--bg-muted);">
+                        <div class="preview-mockup">
+                            <div class="mockup-bar">
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                                <span class="mockup-dot"></span>
+                            </div>
+                            <div class="mockup-wireframe" style="border-style: solid;">
+                                <span style="font-weight: 600;">[ Architectural Editorial ]</span>
+                            </div>
+                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+                                <span>Editorial Layout</span>
+                                <span>Fluid Scaling</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta-row">
+                            <span class="mono-label">Media &bull; 2026</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <h3 class="project-title">Monolith Architecture Review</h3>
+                        <p class="project-desc">Minimalist digital publication featuring bespoke layout grids, rich long-form typography, and distraction-free reading modes.</p>
+                        <div class="project-footer">
+                            <div class="tag-list">
+                                <span class="tag">Editorial</span>
+                                <span class="tag">Typography</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <a href="#contact" class="arrow-link">View Case <span>&nearr;</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities / Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <span class="mono-label">02 / What We Deliver</span>
+                    <h2 class="section-title">Capabilities &amp; Specializations</h2>
+                </div>
+                <p style="color: var(--text-muted); max-width: 440px;">
+                    We focus deeply on what we excel at: crafting digital tools and websites that perform flawlessly under heavy traffic.
+                </p>
+            </div>
+
+            <div class="services-list">
+                <div class="service-row" onclick="location.href='#contact'">
+                    <span class="service-num">01</span>
+                    <h3 class="service-name">Bespoke Web Engineering</h3>
+                    <p class="service-text">Hand-written, lightweight front-end code built directly with semantic HTML5, clean CSS architecture, and fast vanilla JavaScript. Zero framework bloat.</p>
+                    <span class="service-icon">&rarr;</span>
+                </div>
+
+                <div class="service-row" onclick="location.href='#contact'">
+                    <span class="service-num">02</span>
+                    <h3 class="service-name">Interface &amp; Product Design</h3>
+                    <p class="service-text">User journeys, wireframes, high-fidelity prototypes, and cohesive design systems designed with mathematical typographic hierarchy and accessible contrast.</p>
+                    <span class="service-icon">&rarr;</span>
+                </div>
+
+                <div class="service-row" onclick="location.href='#contact'">
+                    <span class="service-num">03</span>
+                    <h3 class="service-name">Speed &amp; Core Web Vitals</h3>
+                    <p class="service-text">In-depth optimization of DOM size, asset delivery, critical CSS inlining, and image compression to guarantee near-instant load times across any network connection.</p>
+                    <span class="service-icon">&rarr;</span>
+                </div>
+
+                <div class="service-row" onclick="location.href='#contact'">
+                    <span class="service-num">04</span>
+                    <h3 class="service-name">Design Systems &amp; Tokens</h3>
+                    <p class="service-text">Modular component libraries and CSS custom property structures that scale reliably as your engineering team and product offerings expand.</p>
+                    <span class="service-icon">&rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Philosophy / About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <span class="mono-label">03 / Studio Philosophy</span>
+                    <h2 class="section-title">Craft Over Convenience</h2>
+                </div>
+            </div>
+
+            <div class="about-columns">
+                <div class="about-narrative">
+                    <h3>The internet deserves fewer generic templates and more intentional craftsmanship.</h3>
+                    <p>
+                        Most modern websites look identical because they are assembled with the same cookie-cutter libraries and AI prompts. We believe the most effective websites are tailored specifically to the problem at hand.
+                    </p>
+                    <p>
+                        Every element we produce is designed with purpose: legible typography, tactile feedback on hover, graceful degradation on older browsers, and pure respect for your user's time and device battery.
+                    </p>
+                    <div style="margin-top: 30px;">
+                        <a href="#contact" class="btn btn-solid">Let's Build Something Together &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="principles-card">
+                    <h4>Studio Principles</h4>
+
+                    <div class="principle-item">
+                        <span class="principle-bullet">1</span>
+                        <div>
+                            <strong>Performant by Default</strong>
+                            <p>Speed is not an afterthought; it is a fundamental design feature that directly impacts trust and conversions.</p>
+                        </div>
+                    </div>
+
+                    <div class="principle-item">
+                        <span class="principle-bullet">2</span>
+                        <div>
+                            <strong>Longevity Over Trends</strong>
+                            <p>We avoid fleeting design gimmicks in favor of timeless editorial structure and robust standards.</p>
+                        </div>
+                    </div>
+
+                    <div class="principle-item">
+                        <span class="principle-bullet">3</span>
+                        <div>
+                            <strong>Transparent Process</strong>
+                            <p>You speak directly with the people writing your code and designing your layout. No account managers or bureaucratic layers.</p>
                         </div>
                     </div>
                 </div>
@@ -155,208 +381,188 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="section services" id="services">
+    <!-- Interactive FAQ Section -->
+    <section class="section" id="faq">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">What We Offer</span>
-                <h2 class="section-title">Specialized Services for Modern Brands</h2>
-                <p class="section-desc">
-                    Comprehensive digital solutions customized to meet your business goals and delight your users.
-                </p>
-            </div>
-
-            <div class="services-grid">
-                <!-- Card 1 -->
-                <div class="service-card">
-                    <div class="service-icon-box">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>High-speed, responsive, and robust websites developed with best-practice semantic HTML, modular modern CSS, and efficient JavaScript.</p>
-                    <a href="#contact" class="service-link">
-                        Get Started <span>&rarr;</span>
-                    </a>
+            <div class="faq-grid">
+                <div>
+                    <span class="mono-label">04 / Questions &amp; Answers</span>
+                    <h2 class="section-title">Common Questions</h2>
+                    <p style="color: var(--text-muted); margin-top: 14px; font-size: 1rem;">
+                        Everything you need to know about our workflow, deliverables, and turnaround times.
+                    </p>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="service-card">
-                    <div class="service-icon-box">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                <div class="accordion">
+                    <div class="accordion-item active">
+                        <button class="accordion-trigger">
+                            <span>How long does a typical project take?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Most bespoke website projects take between 2 to 4 weeks from discovery to final production deployment, depending on content readiness and scope.</p>
+                        </div>
                     </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Clean, human-centered interfaces, intuitive design systems, wireframes, and prototypes that ensure an effortless user experience.</p>
-                    <a href="#contact" class="service-link">
-                        Get Started <span>&rarr;</span>
-                    </a>
-                </div>
 
-                <!-- Card 3 -->
-                <div class="service-card">
-                    <div class="service-icon-box">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span>Why do you write vanilla HTML, CSS, and JS?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Standards-based web code runs natively in all web browsers without heavy dependencies, breaking updates, or security vulnerabilities. It delivers the fastest possible load speeds and is trivial to maintain long-term.</p>
+                        </div>
                     </div>
-                    <h3>Digital Solutions</h3>
-                    <p>End-to-end digital transformation including search engine optimization (SEO), web performance tuning, and custom integrations.</p>
-                    <a href="#contact" class="service-link">
-                        Get Started <span>&rarr;</span>
-                    </a>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span>Do you provide maintenance and ongoing support?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yes. Every project includes a 30-day post-launch warranty period, with optional monthly retainer arrangements for continuous feature development and maintenance.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span>How do we get started?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Simply send an inquiry using the form below or email us directly. We review your goals and schedule a 20-minute alignment call within 24 hours.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
+    <!-- Direct & Functional Contact Section -->
+    <section class="section" id="contact" style="border-bottom: none;">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Let's Connect</span>
-                <h2 class="section-title">Ready to Elevate Your Web Presence?</h2>
-                <p class="section-desc">
-                    Drop us a message, and our team will get back to you within 24 hours.
-                </p>
-            </div>
-
-            <div class="contact-wrapper">
-                <div class="contact-info">
+            <div class="contact-container">
+                <div class="contact-quick">
                     <div>
-                        <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px;">Let's Talk Business</h3>
-                        <p class="contact-info-desc">
-                            Have questions or an exciting project in mind? Reach out to us directly through any of our channels.
+                        <span class="mono-label">05 / Start a Conversation</span>
+                        <h2 class="section-title">Let's Discuss Your Project</h2>
+                        <p style="color: var(--text-muted); margin-top: 14px; font-size: 1.05rem;">
+                            Whether you need a full website build, an interface redesign, or an optimization audit, we are ready to assist.
                         </p>
+
+                        <div class="direct-box">
+                            <span class="mono-label">Direct Studio Email</span>
+                            <div class="email-copy-wrapper">
+                                <span class="email-text" id="studioEmail">hello@rajeshstudio.dev</span>
+                                <button type="button" class="copy-btn" id="copyEmailBtn">Copy Email</button>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                We respond to every inquiry within 24 business hours.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="contact-cards">
-                        <div class="contact-detail-card">
-                            <div class="contact-detail-icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </div>
-                            <div class="contact-detail-text">
-                                <h4>Email Us</h4>
-                                <p>hello@apexdigital.io</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail-card">
-                            <div class="contact-detail-icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                            <div class="contact-detail-text">
-                                <h4>Call Us</h4>
-                                <p>+1 (555) 234-5678</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail-card">
-                            <div class="contact-detail-icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            </div>
-                            <div class="contact-detail-text">
-                                <h4>Headquarters</h4>
-                                <p>San Francisco, CA &amp; Remote Worldwide</p>
-                            </div>
-                        </div>
+                    <div style="margin-top: 30px;">
+                        <span class="mono-label">Location &amp; Work Model</span>
+                        <p style="margin-top: 6px; font-weight: 600;">Worldwide Remote &bull; Kathmandu &bull; Global Clients</p>
                     </div>
                 </div>
 
-                <div class="contact-form-box">
+                <div class="form-box">
                     <form id="contactForm" novalidate>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-input" placeholder="e.g. Alex Morgan" required>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="clientName">Your Name *</label>
+                                <input type="text" id="clientName" class="form-control" placeholder="Rajesh Shrestha" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="clientEmail">Email Address *</label>
+                                <input type="email" id="clientEmail" class="form-control" placeholder="rajesh@example.com" required>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-input" placeholder="e.g. alex@example.com" required>
+                        <div class="form-field">
+                            <label>Estimated Project Budget</label>
+                            <div class="budget-selector">
+                                <button type="button" class="budget-chip" data-budget="$1k-$3k">$1k &ndash; $3k</button>
+                                <button type="button" class="budget-chip" data-budget="$3k-$6k">$3k &ndash; $6k</button>
+                                <button type="button" class="budget-chip" data-budget="$6k-$10k">$6k &ndash; $10k</button>
+                                <button type="button" class="budget-chip" data-budget="$10k+">$10k+</button>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-textarea" placeholder="Tell us about your project, goals, or timeline..." required></textarea>
+                        <div class="form-field">
+                            <label for="clientMessage">Project Details &amp; Goals *</label>
+                            <textarea id="clientMessage" class="form-control" placeholder="Tell us about what you want to build, existing links, or your target timeline..." required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-glow" style="width: 100%;">
-                            <span>Send Message</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        <button type="submit" class="btn btn-solid" style="width: 100%;">
+                            Submit Inquiry &rarr;
                         </button>
 
-                        <div id="response" class="form-response"></div>
+                        <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Studio Footer & Colophon -->
     <footer>
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="#home" class="logo" style="color: white; margin-bottom: 16px;">
-                        <span class="logo-icon">⚡</span>
-                        <span>Apex<span class="gradient-text">Digital</span></span>
+            <div class="footer-main">
+                <div class="footer-colophon">
+                    <a href="#home" class="brand">
+                        <span>Rajesh</span>
+                        <span class="brand-dot"></span>
+                        <span style="font-weight: 400; color: var(--text-muted); font-size: 1rem;">Studio</span>
                     </a>
                     <p>
-                        Building the modern web with precision, craft, and performance. Delivering world-class digital experiences for high-growth businesses.
+                        Independent creative engineering and digital interface design. Built with standards-compliant HTML, CSS, and JavaScript.
                     </p>
-                    <div class="footer-socials">
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Navigation</h4>
+                    <div class="footer-links-list">
+                        <a href="#home">Home</a>
+                        <a href="#work">Selected Work</a>
+                        <a href="#services">Capabilities</a>
+                        <a href="#about">Philosophy</a>
+                        <a href="#faq">FAQ</a>
                     </div>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Navigation</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Our Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                <div>
+                    <h4 class="footer-title">Capabilities</h4>
+                    <div class="footer-links-list">
+                        <a href="#services">Front-End Engineering</a>
+                        <a href="#services">UI/UX Architecture</a>
+                        <a href="#services">Performance Auditing</a>
+                        <a href="#services">Design Tokens</a>
+                    </div>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">UI/UX Design</a></li>
-                        <li><a href="#services">SEO Optimization</a></li>
-                        <li><a href="#services">Cloud Hosting</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Legal &amp; Trust</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
+                <div>
+                    <h4 class="footer-title">Network</h4>
+                    <div class="footer-links-list">
+                        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
+                        <a href="#contact">Direct Email</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 ApexDigital. All Rights Reserved. Crafted with clean HTML, CSS &amp; JS.</p>
-                <p>Designed for Speed &amp; Elegance</p>
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 Studio Rajesh. Crafted by hand with pure HTML, CSS &amp; JS.</span>
+                <span>Designed for Speed, Readability &amp; Longevity.</span>
             </div>
         </div>
     </footer>
 
-    <!-- Back to top button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-    </button>
-
-    <!-- JavaScript -->
+    <!-- Interactive JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
